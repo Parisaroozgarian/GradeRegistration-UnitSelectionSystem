@@ -69,9 +69,9 @@ rightframe2.pack(side=RIGHT)
 
 
 
-Label(leftframe, text='کد دانشجو').grid(row=0)
-Label(leftframe, text='نام دانشجو').grid(row=1)
-Label(leftframe, text='نام خانوادگی دانشجو').grid(row=2)
+Label(leftframe, text='Code Student').grid(row=0)
+Label(leftframe, text='Name of Student').grid(row=1)
+Label(leftframe, text='Family of Student').grid(row=2)
 e1=Entry(leftframe)
 e2=Entry(leftframe)
 e3=Entry(leftframe)
@@ -79,12 +79,12 @@ e1.grid(row=0,column=1)
 e2.grid(row=1,column=1)
 e3.grid(row=2,column=1)
 
-Label(leftframe2, text='کد دروس').grid(row=0)
-Label(leftframe2, text='نام درس').grid(row=1)
-Label(leftframe2, text='نام استاد').grid(row=2)
-Label(leftframe2, text='نام دانشجو').grid(row=3)
-Label(leftframe2, text='نام خانوادگی دانشجو').grid(row=4)
-Label(leftframe2, text='نمرات').grid(row=5)
+Label(leftframe2, text='Code of Lesson').grid(row=0)
+Label(leftframe2, text='Name of Lesson').grid(row=1)
+Label(leftframe2, text='Name of Professor').grid(row=2)
+Label(leftframe2, text='Name of Student').grid(row=3)
+Label(leftframe2, text='Family of Student').grid(row=4)
+Label(leftframe2, text='Marks').grid(row=5)
 e4=Entry(leftframe2)
 e5=Entry(leftframe2)
 e6=Entry(leftframe2)
@@ -99,9 +99,9 @@ e8.grid(row=4,column=1)
 e9.grid(row=5,column=1)
 
 
-Label(rightframe, text='کد استاد').grid(row=0)
-Label(rightframe, text='نام استاد').grid(row=1)
-Label(rightframe, text='نام خانوادگی استاد').grid(row=2)
+Label(rightframe, text='Code Professor').grid(row=0)
+Label(rightframe, text='Name Professor').grid(row=1)
+Label(rightframe, text='Family Professor').grid(row=2)
 e10=Entry(rightframe)
 e11=Entry(rightframe)
 e12=Entry(rightframe)
@@ -110,8 +110,8 @@ e11.grid(row=1,column=1)
 e12.grid(row=2,column=1)
 
 
-Label(rightframe2, text='کد درس').grid(row=0)
-Label(rightframe2, text='نام درس').grid(row=1)
+Label(rightframe2, text='Code Lesson').grid(row=0)
+Label(rightframe2, text='Name Lesson').grid(row=1)
 e13=Entry(rightframe2)
 e14=Entry(rightframe2)
 e13.grid(row=0,column=1)
@@ -174,32 +174,32 @@ def lessons():
 
 
 
-addstdbutton=Button(leftframe, text='ثبت',fg='red',command=stud)
+addstdbutton=Button(leftframe, text='Submit',fg='red',command=stud)
 addstdbutton.grid(row=4,column=1)
 
-showbutton=Button(leftframe, text='فرم ثبت دانشجو',fg='teal',command=show_stud_List)
+showbutton=Button(leftframe, text='Student Form',fg='teal',command=show_stud_List)
 showbutton.grid(row=5,column=1)
 
 
-addmarkbutton=Button(leftframe2, text='ثبت',fg='red',command=marks)
+addmarkbutton=Button(leftframe2, text='Submit',fg='red',command=marks)
 addmarkbutton.grid(row=6,column=1)
 
-showwbbutton=Button(leftframe2,text='فرم ثبت نمرات',fg='teal',command=show_marks_List)
+showwbbutton=Button(leftframe2,text='Marks Form',fg='teal',command=show_marks_List)
 showwbbutton.grid(row=7,column=1)
 
 
-adddbutton=Button(rightframe, text='ثبت',fg='red',command=teach)
+adddbutton=Button(rightframe, text='Submit',fg='red',command=teach)
 adddbutton.grid(row=8,column=1)
 
-showbbutton=Button(rightframe,text='فرم ثبت استاد',fg='teal',command=show_teach_List)
+showbbutton=Button(rightframe,text='Professor Form',fg='teal',command=show_teach_List)
 showbbutton.grid(row=9,column=1)
 
 
 
-addlessonbutton=Button(rightframe2, text='ثبت',fg='red',command=lessons)
+addlessonbutton=Button(rightframe2, text='Submit',fg='red',command=lessons)
 addlessonbutton.grid(row=10,column=1)
 
-showbbbbutton=Button(rightframe2,text='فرم ثبت دروس',fg='teal',command=show_lessons_List)
+showbbbbutton=Button(rightframe2,text='Lesson Form',fg='teal',command=show_lessons_List)
 showbbbbutton.grid(row=11,column=1)
 
 
@@ -208,27 +208,27 @@ showbbbbutton.grid(row=11,column=1)
 
 def printformstudent():
     print(show_stud_List())
-button_1=Button(master, text='فرم ثبت دانشجو',fg='purple',command=printformstudent)
+button_1=Button(master, text='SubmitStudent Form',fg='purple',command=printformstudent)
 button_1.pack()
 
 def printformteacher():
     print(show_teach_List())
-button_2=Button(master, text='فرم ثبت استاد',fg='purple',command=printformteacher)
+button_2=Button(master, text='SubmitProfessor Form',fg='purple',command=printformteacher)
 button_2.pack()
 
 def printformsmarks():
     print(show_marks_List())
-button_3=Button(master, text='فرم ثبت نمرات',fg='purple',command=printformsmarks)
+button_3=Button(master, text='SubmitMarks Form',fg='purple',command=printformsmarks)
 button_3.pack()
 
 def printformlesson():
     print(show_lessons_List())
-button_4=Button(master, text='فرم ثبت دروس',fg='purple',command=printformlesson)
+button_4=Button(master, text='SubmitLesson Form',fg='purple',command=printformlesson)
 button_4.pack()
 
 def printformreport():
     print(show_marks_List(),show_stud_List(),show_lessons_List(),show_teach_List())
-button_5=Button(master, text='ذخیره فایل گزارش',fg='navyblue',command=printformreport)
+button_5=Button(master, text='Save Report File',fg='navyblue',command=printformreport)
 button_5.pack()
 
 

@@ -7,8 +7,6 @@ Description: By clicking on any of the forms, it will show the information. Also
 -  Marks registration form: course code and name, professor's name.
 -   Student registration form: Code, First name, last name.
 
-This code does quite a bit, so let's break it down into manageable sections:
-
 ### SQLite Setup:
 
 ```python
@@ -51,10 +49,3 @@ There are many buttons (like `addstdbutton`, `showbutton`, etc.). Each button ha
 - Some print data to the console.
 
 Finally, `mainloop()` runs, which starts the GUI event loop, allowing user interaction with the GUI until the window is closed.
-
-**Notes:**
-
-1. There are issues in the code. The `marks` class `show` method references a non-existent attribute `self.family4`.
-2. The SQLite connection and cursor are created but not used anywhere in this code. It might be a placeholder for future database interactions.
-3. The GUI design uses `pack` and `grid` layout managers together in the same window, which can be problematic. Ideally, each container (like a frame) should use only one layout manager.
-4. The way the classes are named (like `student`, `teacher`, etc.) follows the Python naming convention. However, the way functions are named (like `stud`, `teach`, etc.) is not consistent and can be confusing. It's better to use more descriptive names for clarity.
